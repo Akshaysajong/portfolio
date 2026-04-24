@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-*bs(l!owxj^6^30$6_o-($&x=^_hs4-29_^mjb_78q2(_d&65j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['3.26.205.157']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["portfolio-8-4907.onrender.com"]
 
 
 # Application definition
@@ -142,3 +142,7 @@ EMAIL_HOST_PASSWORD = ''
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://portfolio-8-4907.onrender.com"
+]
