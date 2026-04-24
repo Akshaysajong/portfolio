@@ -45,3 +45,12 @@ def send_email(request):
         email.send()
 
     return redirect('home')
+
+
+from django.http import HttpResponse
+from django.contrib.auth import get_user_model
+
+def check_user(request):
+    User = get_user_model()
+    users = User.objects.all().values()
+    return HttpResponse(list(users))
