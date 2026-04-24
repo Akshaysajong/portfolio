@@ -6,6 +6,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('send_email', views.send_email, name='send_email'),
-    path('check-user/', views.check_user),
-    path('create-admin/', views.create_admin),
+    # path('check-user/', views.check_user),
+    # path('create-admin/', views.create_admin),
 ]
