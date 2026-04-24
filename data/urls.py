@@ -7,4 +7,5 @@ urlpatterns = [
     path('portfolio/', views.portfolio, name='portfolio'),
     path('send_email', views.send_email, name='send_email'),
     path('check-user/', views.check_user),
+    path('create-admin/', views.create_admin),
 ]
