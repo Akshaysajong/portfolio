@@ -147,14 +147,3 @@ CSRF_TRUSTED_ORIGINS = [
     "https://portfolio-8-4907.onrender.com"
 ]
 
-import os
-
-if os.getenv("DJANGO_SUPERUSER_PASSWORD"):
-    from django.contrib.auth import get_user_model
-    User = get_user_model()
-    if not User.objects.filter(username="admin").exists():
-        User.objects.create_superuser(
-            username="admin",
-            email="admin@example.com",
-            password=os.getenv("DJANGO_SUPERUSER_PASSWORD"),
-        )
