@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*bs(l!owxj^6^30$6_o-($&x=^_hs4-29_^mjb_78q2(_d&65j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['3.26.205.157']
 
 
@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfolio',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST' : 'localhost',
-        'PORT' :'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'portfolio',
+        # 'USER': 'root',
+        # 'PASSWORD': '',
+        # 'HOST' : 'localhost',
+        # 'PORT' :'3306',
     }
 }
 
